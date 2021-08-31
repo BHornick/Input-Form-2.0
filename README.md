@@ -15,3 +15,4 @@ TODO:
 -Move each GUI window into separate file for readablility
 -Make all items children of the parent GUI_start
 -remove all console prints, replace with on-screen visual updates
+-check resolution scaling - should work on any device, regardless of screen ratio/resolution
