@@ -35,7 +35,7 @@ class gui_admin:
         self.label_divider = Label(master,text="------------")
         
         self.button_saveData = Button(master,text="Save Data",command=lambda:self.saveData(node,filename))
-        self.button_quit = Button(master,text="Close App",command=self.close())
+        self.button_quit = Button(master,text="Close App",command=lambda:self.close())
         
         self.label_error.grid(row=0, column=0, sticky=W)
         
@@ -76,8 +76,11 @@ class gui_admin:
             self.label_error_text2.set(self.ADMIN_ERROR_TEXT[self.label_error_index2])
             
     def close(self):
+        print(self.master)
         if self.login:
             self.master.destroy()
+            sys.exit()
+            
         else:
             print("Not Logged in")
 
